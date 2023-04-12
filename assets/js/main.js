@@ -53,3 +53,24 @@ console.log(team[2])
 console.log(team[3])
 console.log(team[4])
 console.log(team[5])
+
+for(let i=0; i<team.length; i++){
+    console.log(team[i].name)
+    console.log(team[i].role)
+    console.log(team[i].image)
+
+    let element = team[i]
+
+    document.querySelector('.row').innerHTML +=
+    `
+    <div class="col">
+        <div class="card my-3 text-center" style="width: 18rem;">
+            <img src="${element.image}" class="card-img-top" alt="">
+            <div class="card-body">
+                <h5 class="card-title">${element.name}</h5>
+                <p class="card-text">${element.role}</p>
+            </div>
+        </div>
+    </div>
+    `
+} 
